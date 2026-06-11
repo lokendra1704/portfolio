@@ -50,25 +50,24 @@ if ! command -v gh >/dev/null 2>&1; then
 fi
 
 # Create the user-site repo if it doesn't exist yet.
-if ! gh repo view "$USER_SITE_REPO" >/dev/null 2>&1; then
+# Note: match on exact full_name -- a renamed repo can leave a redirect that
+# makes `gh repo view` resolve this name to a *different* repo.
+if [[ "$(gh repo view "$USER_SITE_REPO" --json nameWithOwner -q .nameWithOwner 2>/dev/null)" != "$USER_SITE_REPO" ]]; then
   echo "Creating user-site repo $USER_SITE_REPO..."
-  gh repo create "$USER_SITE_REPO" --public \
-    --description "Personal site - lokendra1704.github.io"
+  gh api -X POST user/repos -f name="lokendra1704.github.io" -F private=false \
+    -f description="Personal site" >/dev/null
 fi
 
-# Stage the deployable files in a temp clone and push them.
+# Stage the deployable files in a temp checkout and push them.
+# Use an explicit origin URL (not `gh repo clone`) so a name redirect can't
+# point us at the wrong repo.
 TMP_DIR="$(mktemp -d)"
 trap 'rm -rf "$TMP_DIR"' EXIT
 
-echo "Cloning $USER_SITE_REPO..."
-gh repo clone "$USER_SITE_REPO" "$TMP_DIR" -- --quiet 2>/dev/null || true
-
-# Ensure it's a repo with the deploy branch checked out.
 cd "$TMP_DIR"
 git init -q
 git checkout -q -B "$BRANCH"
-git remote get-url origin >/dev/null 2>&1 || \
-  git remote add origin "https://github.com/$USER_SITE_REPO.git"
+git remote add origin "https://github.com/$USER_SITE_REPO.git"
 git fetch -q origin "$BRANCH" 2>/dev/null && git reset -q --hard "origin/$BRANCH" || true
 
 # Copy current site files over.
