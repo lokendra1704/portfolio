@@ -1,0 +1,114 @@
+Updated. Here's your finalized portfolio data:
+
+---
+
+```json
+{
+  "meta": {
+    "name": "Lokendra Singh",
+    "title": "Senior Software Engineer",
+    "tagline": "AI/ML Engineer · Agentic Systems · Backend",
+    "location": "Jaipur, India",
+    "description": "Senior software engineer building agentic AI systems, backend infrastructure, and developer tooling — where production engineering meets machine learning.",
+    "og_description": "Senior software engineer specializing in agentic AI, backend systems, and ML engineering."
+  },
+
+  "hero": {
+    "name": "Lokendra Singh",
+    "current_role": "Senior Software Engineer",
+    "current_company": "Drizz AI",
+    "location": "Jaipur, India",
+    "bio": "I build agentic systems, backend infrastructure, and AI-powered developer tooling where production engineering meets machine learning. Five years deep in Python and Node.js — most recently at Drizz AI and Skyfall AI, designing systems where LLMs are first-class runtime components.",
+    "links": {
+      "email": "lokendrabairwa@gmail.com",
+      "github": "https://github.com/lokendra1704",
+      "linkedin": "https://www.linkedin.com/in/lokendra1704/"
+    }
+  },
+
+  "about": {
+    "label": "Engineer · Builder · Systems Thinker",
+    "heading": "Engineer who converts stochastic LLMs into deterministic systems.",
+    "paragraphs": [
+      "I'm a Senior Software Engineer at Drizly AI, focused on agentic workflows, stateless agent architectures, and production ML systems. Before that, I was a Founding Backend Engineer at Skyfall AI, building core infrastructure from zero to production.",
+      "My work sits at the intersection of backend engineering and AI — designing agent runtimes, explicit tool interfaces for operational state, and self-optimizing agent loops with JIT-style optimizer patterns.",
+      "Outside work I'm deep into system design (Alex Xu + DDIA), building personal compounding-learning platforms, and thinking hard about how engineers can stay in control of AI-generated codebases."
+    ]
+  },
+
+  "experience": [
+    {
+      "period": "Current",
+      "location": "Remote",
+      "type": "Full-time",
+      "role": "Senior Software Engineer",
+      "company": "Drizz AI",
+      "bullets": [
+        "Designed agentic AI systems with stateless architecture and explicit tool interfaces for all runtime state.",
+        "Built production ML pipelines integrating LLMs as first-class execution components.",
+        "Led backend design for core product features, owning system design from schema to deployment."
+      ]
+    },
+    {
+      "period": "Previous",
+      "location": "Remote",
+      "type": "Full-time",
+      "role": "Founding Backend Engineer",
+      "company": "Skyfall AI",
+      "bullets": [
+        "Built backend infrastructure from scratch as a founding engineer — API design, data models, deployment.",
+        "Architected agentic workflow systems with Python and Node.js serving as primary runtimes.",
+        "Established engineering practices and system design patterns that scaled with the team."
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "category": "Agentic Systems",
+      "title": "Self-Evolving GUI Automation Agent",
+      "description": "Designed a JIT-style optimizer loop for GUI agents: execution tracing → hotspot detection → specialist tool generation. Addressed hard problems around non-resettability and irreversibility in agent action spaces.",
+      "tags": ["Python", "LLM Agents", "GUI Automation", "JIT Optimization"]
+    },
+    {
+      "category": "Developer Tooling",
+      "title": "LLM Code Ownership System",
+      "description": "Built a shared mental model framework for AI-generated code — harness contracts, style specs, and contrast-driven eval loops. Downstream: SFT/KTO fine-tuning pipeline for enforcing codebase conventions.",
+      "tags": ["Python", "Fine-tuning", "SFT", "KTO", "Evals"]
+    },
+    {
+      "category": "Platform",
+      "title": "School Management Platform",
+      "description": "Acting as PM and backend architect for a K-10 school in Jaipur. Produced a full PostgreSQL schema and PRD covering admissions, attendance, academics, and fee management.",
+      "tags": ["PostgreSQL", "System Design", "Product Management"]
+    },
+    {
+      "category": "Learning Infrastructure",
+      "title": "System Design Learning Platform",
+      "description": "Personal learning OS built on Claude Code as agentic runtime — stateless architecture with explicit tools for all pedagogical state, working through Alex Xu's books and DDIA.",
+      "tags": ["Claude Code", "Agentic Systems", "System Design"]
+    }
+  ],
+
+  "skills": {
+    "languages": ["Python", "JavaScript", "TypeScript", "SQL"],
+    "frameworks": ["Node.js", "FastAPI", "LangChain", "LlamaIndex", "PyTorch", "Pandas"],
+    "infra": ["PostgreSQL", "Redis", "Docker", "AWS", "GCP"],
+    "interests": ["Agentic AI Systems", "Developer Tooling", "System Design", "ML Engineering"]
+  },
+
+  "education": {
+    "institution": "IIIT Kota",
+    "degree": "B.Tech, Computer Science",
+    "batch": "Class of 2021",
+    "notes": "56% (official CGPA × 10 conversion per IIIT Kota policy)"
+  },
+
+  "contact": {
+    "heading": "Build, ship, automate.",
+    "email": "lokendrabairwa@gmail.com",
+    "github": "github.com/lokendra1704",
+    "linkedin": "linkedin.com/in/lokendra1704"
+  }
+}
+```
