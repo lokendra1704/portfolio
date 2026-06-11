@@ -30,14 +30,14 @@ fi
 # 1. Commit + push source to the portfolio repo.
 # ---------------------------------------------------------------------------
 if [[ -n "$(git status --porcelain)" ]]; then
-  echo "Committing changes…"
+  echo "Committing changes..."
   git add -A
   git commit -m "$MESSAGE"
 else
   echo "No changes to commit."
 fi
 
-echo "Pushing source to origin/$BRANCH…"
+echo "Pushing source to origin/$BRANCH..."
 git push origin "$BRANCH"
 
 # ---------------------------------------------------------------------------
@@ -51,16 +51,16 @@ fi
 
 # Create the user-site repo if it doesn't exist yet.
 if ! gh repo view "$USER_SITE_REPO" >/dev/null 2>&1; then
-  echo "Creating user-site repo $USER_SITE_REPO…"
+  echo "Creating user-site repo $USER_SITE_REPO..."
   gh repo create "$USER_SITE_REPO" --public \
-    --description "Personal site — lokendra1704.github.io"
+    --description "Personal site - lokendra1704.github.io"
 fi
 
 # Stage the deployable files in a temp clone and push them.
 TMP_DIR="$(mktemp -d)"
 trap 'rm -rf "$TMP_DIR"' EXIT
 
-echo "Cloning $USER_SITE_REPO…"
+echo "Cloning $USER_SITE_REPO..."
 gh repo clone "$USER_SITE_REPO" "$TMP_DIR" -- --quiet 2>/dev/null || true
 
 # Ensure it's a repo with the deploy branch checked out.
@@ -81,7 +81,7 @@ cd "$TMP_DIR"
 git add -A
 if [[ -n "$(git status --porcelain)" ]]; then
   git commit -q -m "$MESSAGE"
-  echo "Pushing site to $USER_SITE_REPO…"
+  echo "Pushing site to $USER_SITE_REPO..."
   git push -u origin "$BRANCH"
 else
   echo "User site already up to date."
